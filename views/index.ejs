@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bhai, theek hai?">
+    <meta name="author" content="Laxya Pahuja">
+    <title>bhyi.tk</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+        <div class="master">
+            <h1>bhyi.tk url shortener</h1>
+            <form action="/shortUrls" method="POST">
+                <input required type="url" name="fullUrl" id="fullUrl" placeholder="url">
+                <input required type="short" name="shortUrl" id="shortUrl" placeholder="shortened backlink">
+                <div class="captcha-container">
+                    <div class="g-recaptcha" data-sitekey="6Lc5MrwZAAAAAJ0h1lr-WptPkWXNGzI7b2riQdFB"></div>
+                </div> 
+                <button type="submit">t k</button>
+            </form>
+            <% if(locals.message && locals.link){ %>
+                <h4 class = "message"><%= locals.message  %> <a href="https://bhyi.tk/<%= locals.link %>">https://bhyi.tk/<%= link %></a> </h4>
+            <% } %>
+        </div>
+        <h3 class="bottom">developed by <a href="https://laxya.co">laxyapahuja</a></h3>
+</body>
+</html>
